@@ -58,7 +58,10 @@ public class LoginActivity extends AppCompatActivity {
                 email = et_email.getText().toString().toLowerCase().trim();
                 password = et_password.getText().toString().trim();
                 if (validateInputs()) {
-                    login();
+                    Intent i = new Intent(LoginActivity.this, NavActivity.class);
+                    startActivity(i);
+                    finish();
+                    //login();
                 }
             }
         });
